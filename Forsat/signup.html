@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up - Forsat</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <a href="index.html" class="logo"><img src="/assets/image/logo.png" alt="logo" width="60px" height="50px"></a>
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="jobs.html">Jobs</a></li>
+                    <li><a href="profile.html">Profile</a></li>
+                </ul>
+                <ul class="auth-menu">
+                    <li><button class="button-64" role="button"><span class="text">Sign Up</span></button></li>
+                    <li>/</li>
+                    <li><button class="button-64" role="button"><span class="text">Login</span></button></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main>
+        <div class="form-container">
+            <h1>Sign Up</h1>
+            <form action="signup.php" method="POST">
+                <label>Username:</label>
+                <input type="text" name="username" required>
+                
+                <label>First Name:</label>
+                <input type="text" name="first_name" required>
+
+                <label>Last Name:</label>
+                <input type="text" name="last_name" required>
+
+                <label>Email:</label>
+                <input type="email" name="email" required>
+
+                <label>Phone Number:</label>
+                <input type="tel" name="phone" required>
+
+                <label>Password:</label>
+                <input type="password" name="password" required>
+
+                <label>Confirm Password:</label>
+                <input type="password" name="confirm_password" required>
+
+                <label>Role:</label>
+                <select name="role" required>
+                    <option value="job_seeker">Job Seeker</option>
+                    <option value="recruiter">Recruiter</option>
+                </select>
+
+                <label for="remember-me">
+                    <input type="checkbox" name="remember_me" id="remember-me">
+                    Remember Me
+                </label>
+
+                <label>
+                    <input type="checkbox" name="terms" required>
+                    I agree to the <a href="#">Terms and Conditions</a>
+                </label>
+
+                <button type="submit">Register</button>
+            </form>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="footer-content">
+            <hr>
+            <p>© 2024 Tous droits réservés, Forsat</p>
+        </div>
+    </footer>
+    <script src="assets/js/scripts.js"></script>
+</body>
+</html>

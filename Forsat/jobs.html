@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job Listings</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="profile.html">Profile</a>
+            <a href="jobs.html">Jobs</a>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Job Listings</h1>
+        <div id="job-listings">
+            <!-- Job listings will be loaded here -->
+        </div>
+    </main>
+
+    <footer>
+        <hr>
+        <p>© 2024 Tous droits réservés, Forsat</p>
+    </footer>
+
+    <script>
+        // Fetch job listings from jobs.php
+        window.onload = function() {
+            fetch('jobs.php')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('job-listings').innerHTML = data;
+                })
+                .catch(error => {
+                    console.error('Error loading job listings:', error);
+                });
+        };
+    </script>
+</body>
+</html>

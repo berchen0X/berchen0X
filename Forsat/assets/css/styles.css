@@ -1,0 +1,462 @@
+/* Reset and basic styling */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #080815;
+    color: #ffffff;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header and Navigation Bar */
+header {
+    background-color: #333;
+    padding: 10px;
+    text-align: center;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px;
+}
+
+.navbar .logo {
+    color: #ffffff;
+    font-size: 1.5em;
+    text-decoration: none;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+}
+
+.nav-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-grow: 1;
+}
+
+.nav-menu li {
+    position: relative;
+    margin-right: 20px;
+}
+
+.nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 10px;
+}
+
+/* Dropdown Menu Styling */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #444;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+/* Sidebar */
+.sidebar {
+    position: sticky;
+    top: 0px; /* Start below the header */
+    left: 0;
+    width: 250px;
+    height: calc(100vh - 60px); /* Adjust to fit below the header */
+    background-color: #222;
+    color: #fff;
+    padding: 20px;
+    overflow-y: auto;
+    box-shadow: 2px 0 5px rgba(0,0,0,0.5);
+}
+
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar li {
+    margin-bottom: 10px;
+}
+
+.sidebar a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+/* Sidebar Links Styling */
+.sidebar-links {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar-links li {
+    margin-bottom: 10px;
+}
+
+.sidebar-links a {
+    color: #ffffff;
+    text-decoration: none;
+    padding: 8px 12px;
+    display: block;
+    transition: background-color 0.3s, color 0.3s; /* Smooth transition */
+}
+
+/* Hover Effect */
+.sidebar-links a:hover {
+    background-color: #444; /* Background change on hover */
+    color: #00DDEB; /* Text color change on hover */
+    border-left: 4px solid #AF40FF; /* Adds a left border on hover */
+    padding-left: 8px; /* Adjust padding when border is added */
+}
+
+/* Main Content Area */
+main {
+    margin-left: 0px; /* Adjust based on sidebar width */
+    display: flex;
+    padding: 20px;
+    flex: 1;
+    overflow: hidden;
+    position: relative; /* Change from sticky to relative */
+}
+
+.welcome-section {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.welcome-text {
+    font-size: 3em;
+    margin-bottom: 10px;
+}
+
+.subtext {
+    font-size: 1.5em;
+    color: #cccccc;
+}
+
+/* Sections Container */
+.sections-container {
+    flex: 2;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #333; /* Background color */
+}
+
+.section {
+    padding: 20px;
+    background-color: #333;
+    border-radius: 8px;
+}
+
+/* Flexbox for Image and Text */
+.content-flex {
+    display: flex;
+    flex-direction: column; /* Stack the image and text in smaller screens */
+    align-items: center;
+    gap: 20px; /* Space between the image and text */
+}
+
+.main-content-image {
+    width: 40%; /* Reduces the size to 40% of the original */
+    display: block;
+    margin: 0; /* Removes automatic centering */
+}
+
+.typewriter-text {
+    font-size: 1.2em;
+    color: #ffffff;
+    white-space: pre-wrap;
+    overflow: hidden;
+    border-right: 3px solid #ffffff; /* Blinking cursor */
+    width: 100%; /* Full width for text */
+    animation: typing 4s steps(60, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #ffffff; }
+}
+
+/* Footer */
+footer {
+    background-color: #4e4a4a;
+    color: #333;
+    text-align: center;
+    padding: 10px;
+    position: relative;
+    bottom: 0;
+    width: 100%; /* Adjust to not overlap with sidebar */
+    left: 0%; /* Adjust based on sidebar width */
+    margin-top: auto;
+}
+
+.footer-content hr {
+    border: 0;
+    border-top: 1px solid #333;
+    margin: 10px 0;
+}
+
+.footer-content p {
+    margin: 0;
+}
+
+/* Add this CSS for the buttons */
+.button-64 {
+    align-items: center;
+    background-image: linear-gradient(144deg,#AF40FF, #5B42F3 50%,#00DDEB);
+    border: none;
+    border-radius: 8px;
+    box-shadow: rgba(151, 65, 252, 0.2) 0 15px 30px -5px;
+    box-sizing: border-box;
+    color: #FFFFFF;
+    display: flex;
+    font-family: Phantomsans, sans-serif;
+    font-size: 10px;
+    justify-content: center;
+    line-height: 1em;
+    max-width: 100%;
+    min-width: 70px;
+    padding: 2px;
+    text-decoration: none;
+    user-select: none;
+    -webkit-user-select: none;
+    touch-action: manipulation;
+    white-space: nowrap;
+    cursor: pointer;
+    margin-left: 20px;
+    transition: background-color 0.3s;
+}
+
+.button-64:active,
+.button-64:hover {
+    outline: 0;
+}
+
+.button-64 span {
+    background-color: rgb(5, 6, 45);
+    padding: 8px 12px;
+    border-radius: 6px;
+    width: 100%;
+    height: 100%;
+    transition: 300ms;
+}
+
+.button-64:hover span {
+    background: none;
+}
+
+@media (min-width: 768px) {
+    .button-64 {
+        font-size: 12px;
+        min-width: 98px;
+    }
+}
+
+/* Remove list styling for auth-menu */
+.auth-menu {
+    list-style: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+    gap: 5px;
+}
+
+.auth-menu a {
+    text-decoration: none;
+    color: #000;
+}
+
+/* Media Queries for responsive adjustments */
+@media (min-width: 768px) {
+    .content-flex {
+        flex-direction: row; /* Side by side on larger screens */
+    }
+    .main-content-image {
+        width: 40%; /* Keeps the image smaller and allows more space for text */
+    }
+    .typewriter-text {
+        width: 60%; /* Gives more space to the text next to the image */
+    }
+}
+
+/* Form Container */
+.form-container {
+    max-width: 500px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #333;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.form-container h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    margin-top: 10px;
+    margin-bottom: 5px;
+    color: #cccccc;
+}
+
+input, select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #666;
+    background-color: #222;
+    color: #fff;
+}
+
+input[type="checkbox"] {
+    width: auto;
+    margin-right: 10px;
+}
+
+button {
+    background-color: #5B42F3;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #4e4a4a;
+}
+
+/* Styles for Content2 */
+.sections-container2 {
+    margin-top: 40px;
+    padding: 20px;
+    background-color: #080815; /* Match the main content background */
+    color: #ffffff; /* Match the main content text color */
+}
+
+.welcome-section2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.welcome-text2 {
+    font-size: 3em; /* Match the main content size */
+    color: #ffffff; /* Match the main content color */
+    margin-bottom: 10px;
+}
+
+.subtext2 {
+    font-size: 1.5em; /* Match the main content size */
+    color: #cccccc; /* Slightly lighter for subtext, as in main content */
+}
+
+.section2 {
+    padding: 20px;
+    background-color: #333; /* Match the main content section background */
+    border-radius: 8px;
+}
+
+.section2 h2 {
+    font-size: 1.8em;
+    color: #ffffff; /* Match the main content heading color */
+    margin-bottom: 15px;
+}
+
+.content-flex2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.typewriter-text2 {
+    font-size: 1.2em;
+    color: #ffffff; /* Match the main content text color */
+    white-space: pre-wrap;
+    overflow: hidden;
+    border-right: 3px solid #ffffff; /* Blinking cursor */
+    width: 100%; /* Full width for text */
+    animation: typing 4s steps(60, end) forwards, blink-caret 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink-caret {
+    from, to { border-color: transparent; }
+    50% { border-color: #ffffff; }
+}
+
+/* Main container layout */
+.main-container {
+    display: flex;
+}
+
+/* Sidebar styles (adjust as needed) */
+.sidebar {
+    width: 250px; /* Adjust based on your design */
+    flex-shrink: 0;
+}
+
+/* Main content area */
+main {
+    flex-grow: 1;
+    padding: 20px;
+}

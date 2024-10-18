@@ -1,0 +1,25 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Post Job</title>
+    <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+    <h1>Post a Job</h1>
+    <form action="post_job.php" method="POST">
+        <label>Job Title:</label>
+        <input type="text" name="title" required><br>
+        <label>Description:</label>
+        <textarea name="description" required></textarea><br>
+        <label>Requirements:</label>
+        <textarea name="requirements" required></textarea><br>
+        <label>Location:</label>
+        <input type="text" name="location" required><br>
+        <label>Company:</label>
+        <input type="text" name="company" required><br>
+        <button type="submit">Post Job</button>
+    </form>
+</body>
+</html>
